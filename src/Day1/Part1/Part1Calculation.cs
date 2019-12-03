@@ -8,7 +8,7 @@ namespace Day1.Part1
     {
         public static void Part1(int[] moduleMasses)
         {
-            Console.WriteLine("Starting calculations for part 1");
+            Console.WriteLine("Starting calculations for day 1 - part 1");
 
             Stopwatch sw1 = Stopwatch.StartNew();
             int totalFuelRequirement = moduleMasses.AsParallel().Sum(moduleMass => CalculateRequiredFuelForModule(moduleMass));
@@ -16,7 +16,7 @@ namespace Day1.Part1
 
             Console.WriteLine($"Total fuel required: {totalFuelRequirement} and it tooks us {sw1.ElapsedMilliseconds}ms.");
 
-            Console.WriteLine("End of part 1");
+            Console.WriteLine("End of day 1 - part 1");
         }
 
         public static int CalculateRequiredFuelForModule(int mass)

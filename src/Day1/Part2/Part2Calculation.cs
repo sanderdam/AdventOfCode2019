@@ -8,14 +8,14 @@ namespace Day1.Part2
     {
         public static void Part2(int[] moduleMasses)
         {
-            Console.WriteLine("Starting calculations for part 2");
+            Console.WriteLine("Starting calculations for day 1 - part 2");
 
             Stopwatch sw2 = Stopwatch.StartNew();
             int totalFuelRequirement = moduleMasses.AsParallel().Sum(moduleMass => CalculateRequiredFuelForMass(moduleMass));
             sw2.Stop();
             Console.WriteLine($"Total fuel required: {totalFuelRequirement} and it tooks us {sw2.ElapsedMilliseconds}ms.");
 
-            Console.WriteLine("End of part 2");
+            Console.WriteLine("End of day 1 - part 2");
         }
 
         public static int CalculateRequiredFuelForMass(int mass)
